@@ -1,0 +1,257 @@
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fafafa;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+}
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  background-color: #f2f2f2; 
+  border-radius: 20px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #f2f2f2; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: black; 
+}
+
+.navbar {
+    /*padding: 15px 10px;*/
+    background: #fff;
+    border: none;
+    /*border-radius: 0;*/
+    margin-bottom: 40px;
+   /* box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);*/
+    /*margin-top: 0px !important;*/
+}
+
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #ddd;
+    margin: 40px 0;
+    position: fixed;
+    top: 0px;
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+
+#sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 999;
+    background: linear-gradient(rgba(0,0,0, .8), rgba(0,0,0, .8)), url('../img/sidenavBackground10.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all 0.3s;
+    color: #fff;
+    /*box-shadow: 1px 10px 18px #888888;*/
+    overflow-y: auto !important;
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    margin-left: 50px;
+    /*background: #fff;*/
+}
+
+.sidebar-logout {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    margin-bottom: 0px;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+    color: white;
+}
+
+#sidebar ul li a:hover {
+    color: #000;
+    text-decoration-line: none;
+    background: #fff;
+}
+
+/*#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+    color: #fff;
+    background: #021460;
+}*/
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    /*background: #021460;*/
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
+}
+
+#content {
+    width: calc(100% - 250px);
+    /*padding: 40px;*/
+    padding-bottom: 40px;
+    min-height: 100vh;
+    transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#content.active {
+    width: 100%;
+}
+
+#sidenavActivation {
+    position: fixed;   
+    flex-wrap: wrap; 
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+    #content {
+        width: 100%;
+    }
+    #content.active {
+        width: calc(100% - 250px);
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
+}
+
+#alumnos{
+    font-family: "Trebuchet MS", Arial, Helvetica;
+    border-collapse: collapse;
+    width: 100%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    overflow: hidden;
+
+}
+#alumnos td, #alumnos th{
+    /*border: 1px solid #dddd;*/
+    padding: 8px;
+}
+#alumnos tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+#alumnos tr:hover{
+    background-color: #ddd;
+}
+#alumnos th{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: rgb(61, 167, 63);
+    color: white;
+}
+.button{
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    margin: 8px 0px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+ }
+.mod{
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 30px 10px;
+    margin: 3px 0px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    text-align: center;
+ }
+ .div{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+ }
+ input[type=text], input[type=email], input[type=number], input[type=date], select[type=text]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+ }
