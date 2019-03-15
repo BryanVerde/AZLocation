@@ -31,4 +31,8 @@ class HomeController extends Controller
         return view('formulario');
     }
 
+    public function ShowDevices()
+    {
+        return view('ShowDevices');
+    }
 }

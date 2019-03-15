@@ -21,24 +21,10 @@
                     <a href="/home">Inicio</a>
                 </li>
                 <li class="active">
-                    <a href="#catalogos" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">Catalogos</a>
+                    <a href="#catalogos" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">Dispositivos</a>
                     <ul class="collapse list-unstyled" id="catalogos">
-                        <li><a href="/formulario">formulario</a></li>
-                        <li ng-click="Content = 'Libros.html'"><a>Libros</a></li>
-                    </ul>
-                </li>
-                <li class="active">
-                    <a href="#prestamo" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">Prestamos</a>
-                    <ul class="collapse list-unstyled" id="prestamo">
-                        <li><a ng-click="Content = 'Internos.html'">Internos</a></li>
-                        <li><a ng-click="Content = 'Devoluciones.html'">Devoluciones</a></li>
-                    </ul>
-                </li>
-                <li class="active">
-                    <a href="#Config" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">Configuración</a>
-                    <ul class="collapse list-unstyled" id="Config">
-                        <li><a ng-click="Content = 'Prestamo.html'">Prestamo</a></li>
-                        <li><a ng-click="Content = 'Recargos.html'">Recargos</a></li>
+                        <li><a href="/formulario">Agregar</a></li>
+                        <li><a href="/ShowDevices">Mostrar</a></li>
                     </ul>
                 </li>
             </ul>
