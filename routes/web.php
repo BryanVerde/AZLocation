@@ -19,6 +19,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/formulario', function(){
+/*Route::get('/formulario', function(){
 	return view('formulario');
-});
+});*/
+
+Route::get('/formulario', 'HomeController@formulario')->name('formulario');

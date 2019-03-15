@@ -25,4 +25,10 @@ class HomeController extends Controller
     {
         return view('HomeUSer');
     }
+
+    public function formulario()
+    {
+        return view('formulario');
+    }
+
 }
