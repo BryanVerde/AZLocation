@@ -35,4 +35,9 @@ class HomeController extends Controller
     {
         return view('ShowDevices');
     }
+
+    public function add()
+    {
+        return view('ShowDevices');
+    }
 }

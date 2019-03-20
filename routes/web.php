@@ -19,4 +19,5 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/formulario', 'HomeController@formulario')->name('formulario');
-Route::get('/ShowDevices', 'HomeController@ShowDevices')->name('ShowDevices');
+Route::get('/ShowDevices', 'localizados@index');
+Route::post('/localizado', 'localizados@store');
