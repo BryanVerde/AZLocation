@@ -2,32 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\localizados;
 use Illuminate\Http\Request;
-use App\localizado;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\DB;
 
-class localizados extends Controller
+class UsersAdmin extends Controller
 {
     /**
-     * Create a new controller instance.
+     * Display a listing of the resource.
      *
-     * @return void
+     * @return \Illuminate\Http\Response
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
     public function index()
     {
-        $localizadoid=Auth()->user()->id;
-        //$data = localizado::find('localizadoid');
-        $data = DB::table('localizados')->where('localizadoid', $localizadoid)->get();
-
-        //$data = $data;
-        return view('ShowDevices', compact('data'));
+        //
     }
 
     /**
@@ -48,14 +34,7 @@ class localizados extends Controller
      */
     public function store(Request $request)
     {
-        $data=new localizado();
-        $data->localizadoid=Auth()->user()->id;
-        $data->name=$request->input('name');
-        $data->phone=$request->input('phone');
-        $data->username=$request->input('username');
-        $data->password=Hash::make($request->input('password'));
-        $data->save();
-        return $data;
+        //
     }
 
     /**
@@ -66,7 +45,7 @@ class localizados extends Controller
      */
     public function show($id)
     {
-        
+        //
     }
 
     /**

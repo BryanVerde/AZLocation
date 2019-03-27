@@ -3,9 +3,9 @@
 
 @section('header')
 	@parent
-		{{$data}}
+		{{json_encode($data)}}
 		<div class="row">
-		@foreach($data as $localizado )
+		@foreach($data as $localizado)
 		  <div class="card col-sm-12 col-md-3 offset-md-1" style="width:400px; margin-top: 10px;" data-toggle="modal" data-target="#myModal">
 		    <img class="card-img-top" src="{{asset('img/device.png')}}" alt="Card image" style="width:100%">
 		    <div class="card-body">

@@ -11,7 +11,7 @@
             <!-- Icon -->
             <div class="fadeIn first">
                 <!--<img src="assets/User.png" id="icon" alt="User Icon" />-->
-                <i class="fas fa-id-badge" id="icon"></i>
+                <i class="fas fa-id-badge" id="icon" style="text-align: center;"></i>
             </div>
 
             <!-- Login Form -->
@@ -56,39 +56,39 @@
             </form>-->
 
             <form method="POST" action="{{ route('login') }}">
-                    @csrf
+                @csrf
 
-                    <div class="form-group">
-                        <label for="login" class="text-md-right text-white">
-                            {{ __('Username or Email') }}
-                        </label>
-                     
-                        <div class="fadeIn second">
-                            <input id="login" type="text" class="form-control{{ $errors->has('username') || $errors->has('email') ? ' is-invalid' : '' }}" name="login" value="{{ old('username') ?: old('email') }}" required autofocus>
-                     
-                            @if ($errors->has('username') || $errors->has('email'))
-                                <span class="invalid-feedback">
-                                    <strong>{{ $errors->first('username') ?: $errors->first('email') }}</strong>
-                                </span>
-                            @endif
-                        </div>
+                <div class="form-group">
+                    <label for="login" class="text-md-right text-white">
+                        {{ __('Username or Email') }}
+                    </label>
+
+                    <div class="fadeIn second">
+                        <input id="login" type="text" class="form-control{{ $errors->has('username') || $errors->has('email') ? ' is-invalid' : '' }}" name="login" value="{{ old('username') ?: old('email') }}" required autofocus>
+
+                        @if ($errors->has('username') || $errors->has('email'))
+                        <span class="invalid-feedback">
+                            <strong>{{ $errors->first('username') ?: $errors->first('email') }}</strong>
+                        </span>
+                        @endif
                     </div>
+                </div>
 
-                    <div class="form-group">
-                        <label for="password" class="text-white text-md-right">{{ __('Password') }}</label>
+                <div class="form-group">
+                    <label for="password" class="text-white text-md-right">{{ __('Password') }}</label>
 
-                        <div class="fadeIn third">
-                            <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+                    <div class="fadeIn third">
+                        <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
 
-                            @if ($errors->has('password'))
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $errors->first('password') }}</strong>
-                                </span>
-                            @endif
-                        </div>
+                        @if ($errors->has('password'))
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $errors->first('password') }}</strong>
+                        </span>
+                        @endif
                     </div>
+                </div>
 
-                    <!--<div class="form-group fadeIn third">
+                <!--<div class="form-group fadeIn third">
                         <div class="col-md-6 offset-md-4">
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
@@ -100,18 +100,18 @@
                         </div>
                     </div>-->
 
-                    <div class="form-group  mb-0">
-                        <div>
-                            <input type="submit" class="fadeIn fourth" value="Log In">
+                <div class="form-group  mb-0">
+                    <div>
+                        <input type="submit" class="fadeIn fourth" value="Log In">
 
-                            <!--@if (Route::has('password.request'))
+                        <!--@if (Route::has('password.request'))
                                 <a class="btn btn-link" href="{{ route('password.request') }}">
                                     {{ __('Forgot Your Password?') }}
                                 </a>
                             @endif-->
-                        </div>
                     </div>
-                </form>
+                </div>
+            </form>
 
             <!-- Remind Passowrd -->
             <div id="formFooter">
@@ -193,4 +193,4 @@
         </div>
     </div>
 </div>-->
-@endsection
+@endsection 
