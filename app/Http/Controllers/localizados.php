@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\localizados;
+//use App\Http\Controllers\localizados;
 use Illuminate\Http\Request;
 use App\localizado;
 use Illuminate\Support\Facades\Hash;
@@ -24,10 +24,11 @@ class localizados extends Controller
     {
         $localizadoid=Auth()->user()->id;
         //$data = localizado::find('localizadoid');
-        $data = DB::table('localizados')->where('localizadoid', $localizadoid)->get();
-
+        $data = DB::table('localizados')->where('localizadoid', $localizadoid)->get()->toArray();
+        //$data = DB::table('cliente')->join('users', 'cliente.user_id', '=', 'users.id')->select('users.name', 'users.email');
         //$data = $data;
         return view('ShowDevices', compact('data'));
+        
     }
 
     /**
