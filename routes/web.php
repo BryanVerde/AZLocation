@@ -29,4 +29,9 @@ Route::prefix('admin')->group(function(){
     Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
     Route::get('/', 'AdminController@index')->name('admin.home');
     Route::get('/ShowClientes', 'AdminController@ShowClientes')->name('admin.clientes');
+    Route::get('/addClientes', 'AdminController@addform')->name('admin.addclientes');
+    Route::post('/addClientesa', 'AdminController@createuser')->name('admin.addclientespost');
+    Route::get('/modClientes/{id}', 'AdminController@showmodcliente')->name('admin.modclientesshow');
+    Route::post('/modClientessave/{id}', 'AdminController@updateCliente')->name('admin.modclientessave');
+    Route::delete('/deleteCliente/{id}', 'AdminController@deleteCliente')->name('admin.delete');
 });

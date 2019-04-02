@@ -5,17 +5,18 @@
 @parent
 <div class="row">
     @foreach($data as $localizad)
-    <div class="card col-sm-12 col-md-3 offset-md-1" style="width:400px; margin-top: 10px;" data-toggle="modal" data-target="#myModal">
+    <div ng-click="pasar('{{$localizad->name}}', '{{$localizad->username}}', '{{$localizad->phone}}')" class="card col-sm-12 col-md-3 offset-md-1" style="width:400px; margin-top: 10px;" data-toggle="modal" data-target="#myModal">
         <img class="card-img-top" src="{{asset('img/device.png')}}" alt="Card image" style="width:100%">
         <div class="card-body">
             <h4 class="card-title">{{ $localizad->name }}</h4>
             <p class="card-text">Device Example</p>
             <!-- Button to Open the Modal -->
-            <button type="button" class="btn btn-primary" >
+            <button type="button" ng-click="pasar('{{$localizad->name}}', '{{$localizad->username}}', '{{$localizad->phone}}')" class="btn btn-primary" >
                 More Information
             </button>
         </div>
     </div>
+    @endforeach
 
     <!-- The Modal -->
     <div class="modal fade" id="myModal">
@@ -32,9 +33,11 @@
                 <div class="modal-body">
                     <img class="img-fluid" src="{{asset('img/device.png')}}" alt="Card image" style="width:100%">
                     <div class="container">
-                        <p>Name: {{ $localizad->name }}</p>
-                        <p>Username: {{ $localizad->username }}</p>
-                        <p>Phone: {{ $localizad->phone }}</p>
+                        
+                        <p>Name: @{{ showdevides.name }} </p>
+                        <p>Username: @{{ showdevides.username }}</p>
+                        <p>Phone: @{{ showdevides.phone }}</p>
+                        
                     </div>
                 </div>
 
@@ -46,7 +49,6 @@
             </div>
         </div>
     </div>
-    @endforeach
 </div>
 </div>
 @section('footer')

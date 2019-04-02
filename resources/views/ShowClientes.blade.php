@@ -27,10 +27,9 @@
                 <td>{{$user->address}}</td>
                 <td>{{$user->city}}</td>
                 <td>{{$user->state}}</td>
-                <td><button class="btn btn-warning" type="button" ng-click="modificar({{$user->id}})">Modificar
-                    </button>
-                    <button class="btn btn-danger" type="button" ng-click="delete({{$user->id}})">Eliminar
-                    </button></td>
+                <td><a href="/admin/modClientes/{{$user->id}}"><button class="btn btn-warning" type="button">Modificar</button></a>
+                    <button class="btn btn-danger" type="button" ng-click="delete('{{$user->id}}')">Eliminar</button>
+                </td>
             </tr>
             @endforeach
         </tbody>

@@ -4,35 +4,30 @@
 @section('header')
 	@parent
 	<div ng-controller="ctrl" class="container">
-		<form>
-			<h2 id="r">Modificar</h2>
+		<form name="form" ng-model-options="{ updateOn: 'blur'}">
+			<h2 id="r">Add Device</h2>
 			<div>
-				<label>Nombre</label>
-				<input type="text" ng-model="persona2.nombre">
+				<label>Name*</label>
+				<input type="text" pattern="[A-Za-z]+" ng-model="persona.name" name="name" required>
+				<span ng-show="form.name.$dirty && form.name.$error.required" style="color: red;">Campo Requerido</span>
 			</div>
 			<div>
-				<label>Apellido</label>
-				<input type="text" ng-model="persona2.apellidos">
+				<label>Phone*</label>
+				<input type="number" pattern="[0-9]+" maxlength="10" ng-model="persona.phone" name="phone" required>
+				<span ng-show="form.phone.$dirty && form.phone.$error.required" style="color: red;">Campo Requerido</span>
 			</div>
 			<div>
-				<label>Fecha de Nacimiento</label>
-				<input type="date" ng-model="date2">
+				<label>Username*</label>
+				<input type="text" ng-model="persona.username" name="username" required>
+				<span ng-show="form.username.$dirty && form.username.$error.required" style="color: red;">Campo Requerido</span>
 			</div>
 			<div>
-				<label>Edad</label>
-				<input readonly type="number" ng-bind="edad()" ng-model="persona2.edad">
+				<label>password*</label>
+				<input type="password" maxlength="8" ng-model="persona.password" name="password" required>
+				<span ng-show="form.password.$dirty && form.password.$error.required" style="color: red;">Campo Requerido</span>
 			</div>
-			<div>
-				<label>Fecha de la cita</label>
-				<select type="text" ng-model="persona2.fechaCita" ng-options="i for i in fechaCita"></select>
-			</div>
-			<div>
-				<label>Fecha Horario</label>
-				<select type="text" ng-model="persona2.horario" ng-options="i for i in horario"></select>
-			</div>
-			<button class="btn btn-warning" type="button" ng-click="update(persona2.id)">Modificar</button>
-			<!--<button class="btn btn-danger" type="button" ng-click="delete(persona2.id)">Eliminar</button>-->
-			<button class="btn btn-success" type="button" ng-click="show()">Regresar</button>
+			<button class="btn btn-warning" type="button" ng-click="guardar()" ng-disabled="!form.$valid">Guardar</button>
+			<button class="btn btn-warning" type="button" ng-click="guardar()" ng-disabled="!form.$valid">Cancelar</button>
 		</form>
 	</div>
 	@section('footer')

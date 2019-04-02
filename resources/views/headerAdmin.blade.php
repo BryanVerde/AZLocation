@@ -25,6 +25,9 @@
                     <a href="/admin/">Inicio</a>
                 </li>
                 <li class="active">
+                    <a href="/admin/addClientes">Agregar Clientes</a>
+                </li>
+                <li class="active">
                     <a href="/admin/ShowClientes">Mostrar Clientes</a>
                 </li>
             </ul>
