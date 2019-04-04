@@ -33,11 +33,9 @@
                 <div class="modal-body">
                     <img class="img-fluid" src="{{asset('img/device.png')}}" alt="Card image" style="width:100%">
                     <div class="container">
-                        
-                        <p>Name: @{{ showdevides.name }} </p>
+                        <p>Name: @{{ showdevides.name }}</p>
                         <p>Username: @{{ showdevides.username }}</p>
                         <p>Phone: @{{ showdevides.phone }}</p>
-                        
                     </div>
                 </div>
 
